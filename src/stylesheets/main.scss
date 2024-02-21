@@ -1,1 +1,343 @@
 // Your styles go here
+html {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+* {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+}
+main {
+    width: 75%;
+    margin: 0 auto;
+}
+img {
+    width: 100%;
+}
+header {
+    background-color: rgb(220, 222, 224);
+    padding-bottom: 0;
+}
+header > nav > ul {
+    display: flex;
+    list-style-type: none;
+    align-items: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+header > nav > ul > li {
+    padding: 1rem;
+    
+}
+header > nav > ul > li > h2 {
+    margin: 0;
+}
+a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: rgb(249, 6, 6);
+    
+}
+header a:hover, header a:focus {
+    transition: transform 1s ease-out;
+    font-size: 1.5rem;
+    transform: scale(1,1.5);
+    border-bottom: 2px solid rgb(204, 2, 2);
+}
+
+header h1 {
+    color: white;
+    padding: 2rem;
+    margin: 0;
+    text-align: center;
+    font-size: 3rem;
+}
+header p{
+    font-size: 2rem;
+    padding: 1rem 0 1.5rem 1.5rem;
+}
+.jumbo-button {
+    text-align: center;
+    padding: 2rem
+}
+.jumbo-button button {
+    background-color: rgb(204, 2, 2);
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 4rem;
+    border: none;
+    
+}
+
+header > nav > ul > li:nth-child(3){
+    flex: 1;
+}
+.jumbotron {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(155, 157, 159);
+}
+.left-jumbo {
+    grid-template-areas: 1 / 1 / span 1 / span 1;
+}
+
+.right-jumbo {
+    grid-template-areas: 1 / 2 / span 1 / span 1;
+}
+.button-top {
+    text-align: center;
+}
+.button-top button {
+    background-color: rgb(204, 2, 2);
+    font-size: 4rem;
+    padding: 2rem 4rem;
+    margin: 2rem;
+    perspective: 500px; 
+    
+}
+.button-top button:active {
+    animation: expand 1.5s ease-in-out 3; 
+}
+
+@keyframes expand {
+    0% {
+      transform: translateZ(-800px) rotateY(90deg);   
+      opacity: 0;
+    }
+    56% {
+      transform: translateZ(-160px) rotateY(87deg);   
+      opacity: 1;
+    }
+    100% {
+      transform: translateZ(0) rotateY(0);            
+    }
+}
+
+.button-bottom {
+    text-align: center;
+}
+.button-bottom button {
+    background-color: rgb(204, 2, 2);
+    font-size: 4rem;
+    padding: 2rem 4rem;
+    margin: 2rem;
+    text-align: center;
+}
+
+.button-bottom button:active {
+    animation: rotating 1s linear 4; 
+}
+
+@keyframes rotating {
+    0% {
+      transform: rotateZ(0);   
+    }
+    25% {
+        transform: rotatez(90deg)
+    }
+    50% {
+      transform: rotateZ(180deg);   
+    }
+    75% {
+      transform: RotateZ(270deg);            
+    }
+    100% {
+        transform: RotateZ(360deg);            
+      }
+}
+
+main h1 {
+    text-align: center;
+}
+span {
+    margin: .5rem 0;
+}
+
+.container_1 {
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 2px solid rgb(236, 230, 230);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.container_1 img {
+    width: 100%;
+    height: 40vh;
+    padding: 5px;
+    border: 2px solid rgb(236, 230, 230);
+    margin-right: 10px;
+}
+.container_1 div {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.container_1 button {
+    background-color: rgb(204, 2, 2);
+    color: white;
+    text-align: center;
+    padding: .5rem;
+    border: none;
+}
+.new1 {
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+.new2 {
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+.new3 {
+    grid-area: 1 / 3 / span 1 / span 1;
+}
+.new4 {
+    grid-area: 1 / 4 / span 1 / span 1;
+}
+
+.bar {
+    padding: 1rem 0;
+    border-top: 2px solid rgb(236, 230, 230);
+    border-bottom: 2px solid rgb(236, 230, 230);
+    margin: 1rem 0;
+}
+.bar h2{
+    background-color: #f38888;
+    padding: .75rem;
+    margin: .5rem;
+    border: 1px solid rgb(161, 154, 154);
+}
+
+.container_2 {
+    border-top: 2px solid rgb(236, 230, 230);
+    border-bottom: 2px solid rgb(236, 230, 230);
+    margin: 1rem 0;
+    padding: 1.5rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.container_2 img {
+    width: 100%;
+    height: 30vh;
+    padding: 5px;
+    border: 2px solid rgb(236, 230, 230);
+    margin-right: 10px;
+}
+.container_2 div {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.container_2 button {
+    border: 1px solid rgb(204, 2, 2);
+    color:rgb(204, 2, 2);
+    padding: .5rem;
+    background-color: #fff;
+}
+
+.neat1 {
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+.neat2 {
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+.neat3 {
+    grid-area: 1 / 3 / span 1 / span 1;
+}
+.neat4 {
+    grid-area: 1 / 4 / span 1 / span 1;
+}
+.neat5 {
+    grid-area: 1 / 5 / span 1 / span 1;
+}
+.neat6 {
+    grid-area: 1 / 6 / span 1 / span 1;
+}
+
+.container_3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.container_3 img {
+    width: 125px;
+    height: 125px;
+    padding: 5px;
+    border: 2px solid rgb(236, 230, 230);
+    margin-right: 10px;
+}
+.container_3 .flex {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.top1 {
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+.top2 {
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+.top3 {
+    grid-area: 1 / 3 / span 1 / span 1;
+}
+.top4 {
+    grid-area: 2 / 1 / span 1 / span 1;
+}
+.top5 {
+    grid-area: 2 / 2 / span 1 / span 1;
+}
+.top6 {
+    grid-area: 2 / 3 / span 1 / span 1;
+}
+.top7 {
+    grid-area: 3 / 1 / span 1 / span 1;
+}
+.top8 {
+    grid-area: 3 / 2 / span 1 / span 1;
+}
+.top9 {
+    grid-area: 3 / 3 / span 1 / span 1;
+}
+.top10 {
+    grid-area: 4 / 1 / span 1 / span 1;
+}
+.top11 {
+    grid-area: 4 / 2 / span 1 / span 1;
+}
+.top12 {
+    grid-area: 4 / 3 / span 1 / span 1;
+}
+
+footer {
+    background-color: rgb(205, 206, 206);
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    color: black
+}
+footer ul {
+    list-style-type: none;
+}
+footer ul li {
+    padding: .5rem;
+}
+.container_4 {
+    margin: 0 auto;
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.left-col {
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.middle-col {
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.right-col {
+    grid-area: 1 / 3 / span 1 / span 1;
+}
